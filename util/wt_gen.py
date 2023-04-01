@@ -10,16 +10,20 @@ parser.add_argument('expression', type=str,
 args = parser.parse_args()
 print(f'Evaluating: {args.expression}')
 
+# Parameters for creating the lookup table.
+domain = 2 * np.pi
+steps = 20
+
+# CAS-ify.
 x = symbols("x")
 expr = sympify(args.expression)
 
-steps = 20
-
+# Minimum and maximum values are useful for normalization.
 minimum = np.inf
 maximum = 0
-
 values = []
-for i in np.linspace(0, 2*np.pi, steps):
+# Evaluate expression across the domain.
+for i in np.linspace(0, domain, steps):
     value = expr.evalf(subs={x: i})
     if value < minimum:
         minimum = value
@@ -27,6 +31,9 @@ for i in np.linspace(0, 2*np.pi, steps):
         maximum = value
     values.append(f'{value:.20f}')
 
+#
+# Render and save template.
+#
 environment = Environment(loader=FileSystemLoader("src/synthesis/wave_tables/"))
 template = environment.get_template("wave_table_template.h")
 
