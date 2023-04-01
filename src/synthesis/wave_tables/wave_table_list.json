@@ -1,0 +1,21 @@
+{
+    "wave_tables":
+    [
+        {
+            "name": "Sine",
+            "expression": "sin(x)"
+        },
+        {
+            "name": "Square",
+            "expression": "sign(sin(x))"
+        },
+        {
+            "name": "Triangle",
+            "expression": "2/pi * arcsin((sin(x))"
+        },
+        {
+            "name": "Sawtooth",
+            "expression": "2 * (x/(2*pi) - floor(1/2 + x/(2*pi)))"
+        }
+    ]
+}
