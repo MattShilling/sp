@@ -11,7 +11,7 @@
         },
         {
             "name": "Triangle",
-            "expression": "2/pi * arcsin((sin(x))"
+            "expression": "2/pi * asin(sin(x))"
         },
         {
             "name": "Sawtooth",
