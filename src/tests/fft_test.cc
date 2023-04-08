@@ -45,7 +45,7 @@ int main() {
   }
 
   // Look through all frequency bins and find the frequency component with the
-  // highest component.
+  // highest amplitude.
   double max_amp = 0;
   double max_amp_freq = 0;
   for (size_t freq_hz = 0; freq_hz < (sample_rate / 2); freq_hz++) {
