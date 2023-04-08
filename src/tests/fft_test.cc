@@ -23,7 +23,7 @@ typedef std::array<real_type, sample_rate> RealArray1D;
 typedef std::array<complex_type, sample_rate> ComplexArray1D;
 
 int main() {
-  WaveTableOscillator sin_osc(Sine, sine_frequency, sample_rate);
+  WaveTableOscillator sin_osc(Sine, M_PI, sine_frequency, sample_rate);
 
   // Generate 1s worth of our signal.
   RealArray1D samples;
