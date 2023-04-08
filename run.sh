@@ -5,6 +5,6 @@ set -e
 docker run \
   --rm \
   -v $(pwd):/src \
-  -u $(id -u):$(id -g) \
+  -it \
   main \
-  -it /bin/bash
+  /bin/bash

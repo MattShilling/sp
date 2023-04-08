@@ -15,3 +15,5 @@ RUN pip install \
     matplotlib \
     ipympl \
     pandas
+
+WORKDIR src/
