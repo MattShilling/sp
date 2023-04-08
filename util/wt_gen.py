@@ -79,15 +79,13 @@ class WaveTable:
 
 
 def get_wave_tables(wave_table_config) -> List[WaveTable]:
-    wave_table_list_json = None
+    wave_tables_json = None
     # Load wave table configuration file.
-    with open(wave_table_config, 'r') as myfile:
-        data = myfile.read()
-        wave_table_list_json = json.loads(data)
+    with open(wave_table_config, 'r') as f:
+        wave_tables_json = json.loads(f.read())
 
     wave_tables: List[WaveTable] = []
-
-    for wave_table in wave_table_list_json['wave_tables']:
+    for wave_table in wave_tables_json['wave_tables']:
         expression = wave_table['expression']
         minimum, maximum, values = evaluate_expression(expression)
         wave_tables.append(
