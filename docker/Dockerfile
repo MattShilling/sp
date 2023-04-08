@@ -7,4 +7,11 @@ RUN apt update && apt install -y --no-install-recommends \
     python3 \
     pip
 
-RUN pip install sympy "textual[dev]" numpy
+RUN pip install \
+    sympy \
+    "textual[dev]" \
+    numpy \
+    Jinja2 \
+    matplotlib \
+    ipympl \
+    pandas
