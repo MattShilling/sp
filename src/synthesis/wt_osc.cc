@@ -1,3 +1,5 @@
+#include <cmath>
+
 #include "synthesis/wt_osc.h"
 
 double WaveTableOscillator::value() const { return wt_.at(phase_); }
