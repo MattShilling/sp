@@ -2,7 +2,6 @@
 
 #include <array>
 #include <cmath>
-#include <iostream>
 
 struct WaveTable {
 private:
