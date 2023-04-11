@@ -11,3 +11,5 @@ cmake -B build -G Ninja
 
 # Build the project
 cmake --build build
+
+cd build && ninja test

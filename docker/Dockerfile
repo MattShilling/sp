@@ -8,12 +8,13 @@ RUN apt update && apt install -y --no-install-recommends \
     pip
 
 RUN pip install \
-    sympy \
-    "textual[dev]" \
-    numpy \
-    Jinja2 \
-    matplotlib \
     ipympl \
-    pandas
+    Jinja2 \
+    numpy \
+    librosa \
+    matplotlib \
+    pandas \
+    sympy \
+    "textual[dev]"
 
 WORKDIR src/
